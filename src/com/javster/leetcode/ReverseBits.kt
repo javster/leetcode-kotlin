@@ -6,6 +6,7 @@ fun main() {
 }
 
 class ReverseBits {
+
     fun reverseBits(n: Int): Int {
         var newInt = 0
         repeat(32) { bitNumber ->
