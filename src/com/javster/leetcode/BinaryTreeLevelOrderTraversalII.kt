@@ -8,15 +8,10 @@ fun main() {
             right = TreeNode(7)
         }
     }
-    println(Solution().levelOrderBottom(root))
+    println(BinaryTreeLevelOrderTraversalII().levelOrderBottom(root))
 }
 
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
-
-class Solution {
+class BinaryTreeLevelOrderTraversalII {
     private val levels = ArrayList<ArrayList<Int>>()
 
     fun levelOrderBottom(root: TreeNode?): List<List<Int>> {

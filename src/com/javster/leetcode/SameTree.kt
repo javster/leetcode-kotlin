@@ -1,9 +1,5 @@
 package com.javster.leetcode
 
-import com.sun.source.tree.Tree
-import java.util.*
-import kotlin.collections.ArrayList
-
 fun main() {
     val p = TreeNode(1).apply {
         left = TreeNode(2)
