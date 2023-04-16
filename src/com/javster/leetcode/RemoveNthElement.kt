@@ -1,28 +1,27 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.ListNode
+import com.javster.leetcode.utils.printNodes
+
 fun main() {
-    val headNode = ListNode1(1).apply {
-        next = ListNode1(2).apply {
-            next = ListNode1(3).apply {
-                next = ListNode1(4).apply {
-                    next = ListNode1(5)
+    val headNode = ListNode(1).apply {
+        next = ListNode(2).apply {
+            next = ListNode(3).apply {
+                next = ListNode(4).apply {
+                    next = ListNode(5)
                 }
             }
         }
     }
-    val res = removeNthFromEnd(ListNode1(1), 1)
-    printAll(res)
+    val res = removeNthFromEnd(ListNode(1), 1)
+    printNodes(res)
 }
 
-class ListNode1(var `val`: Int) {
-    var next: ListNode1? = null
-}
-
-fun removeNthFromEnd(head: ListNode1?, n: Int): ListNode1? {
+fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
     if (head == null) return null
     var size = 0
     var current = head
-    val map = HashMap<Int, ListNode1?>()
+    val map = HashMap<Int, ListNode?>()
     while (current != null) {
         map[size++] = current
         current = current.next
@@ -40,12 +39,4 @@ fun removeNthFromEnd(head: ListNode1?, n: Int): ListNode1? {
             return head.next
         }
     return head
-}
-
-fun printAll(head: ListNode1?) {
-    var current = head
-    while (current != null) {
-        println("${current.`val`}")
-        current = current.next
-    }
 }

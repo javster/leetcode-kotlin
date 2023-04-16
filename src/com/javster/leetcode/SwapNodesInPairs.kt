@@ -1,23 +1,26 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.ListNode
+import com.javster.leetcode.utils.printNodes
+
 fun main() {
-    val headNode = ListNode2(1)
+    val headNode = ListNode(1)
         .apply {
-        next = ListNode2(2)
+        next = ListNode(2)
             .apply {
-            next = ListNode2(3).apply {
-                next = ListNode2(4)
+            next = ListNode(3).apply {
+                next = ListNode(4)
             }
         }
     }
     val res = swapPairs(headNode)
-    printAll(res)
+    printNodes(res)
 }
 
-fun swapPairs(head: ListNode2?): ListNode2? {
+fun swapPairs(head: ListNode?): ListNode? {
     var head = head
     var current = head
-    var previous: ListNode2? = null
+    var previous: ListNode? = null
     while (current?.next != null) {
         var temp = current.next!!.next
         current.next!!.next = current
@@ -31,16 +34,4 @@ fun swapPairs(head: ListNode2?): ListNode2? {
         current = temp
     }
     return head
-}
-
-class ListNode2(var `val`: Int) {
-    var next: ListNode2? = null
-}
-
-fun printAll(head: ListNode2?) {
-    var current = head
-    while (current != null) {
-        println("${current.`val`}")
-        current = current.next
-    }
 }

@@ -1,5 +1,7 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.ListNode
+
 fun main() {
     val head = ListNode(1)
     var currentNode = head
@@ -29,8 +31,4 @@ class MiddleNode {
         for (i in 0 until counter / 2) currentNode = currentNode?.next
         return currentNode
     }
-}
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }
