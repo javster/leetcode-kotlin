@@ -4,6 +4,12 @@ class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
 
+class DoublyLinkedList(var `val`: Int) {
+    var prev: DoublyLinkedList? = null
+    var next: DoublyLinkedList? = null
+    var child: DoublyLinkedList? = null
+}
+
 fun printNodes(head: ListNode?) {
     var node = head
     while (node != null) {

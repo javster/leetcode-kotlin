@@ -1,10 +1,5 @@
 package com.javster.leetcode
 
-import java.util.*
-import kotlin.Comparator
-import kotlin.collections.HashMap
-
-
 fun main() {
     TopKFrequentElements().topKFrequent(intArrayOf(1, 2), 2).forEach {
         print(it)

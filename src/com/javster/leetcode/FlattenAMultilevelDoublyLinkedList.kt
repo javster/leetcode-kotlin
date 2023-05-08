@@ -1,18 +1,20 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.DoublyLinkedList
+
 fun main() {
-    val node1 = Node(1)
-    val node2 = Node(2)
-    val node3 = Node(3)
-    val node4 = Node(4)
-    val node5 = Node(5)
-    val node6 = Node(6)
-    val node7 = Node(7)
-    val node8 = Node(8)
-    val node9 = Node(9)
-    val node10 = Node(10)
-    val node11 = Node(11)
-    val node12 = Node(12)
+    val node1 = DoublyLinkedList(1)
+    val node2 = DoublyLinkedList(2)
+    val node3 = DoublyLinkedList(3)
+    val node4 = DoublyLinkedList(4)
+    val node5 = DoublyLinkedList(5)
+    val node6 = DoublyLinkedList(6)
+    val node7 = DoublyLinkedList(7)
+    val node8 = DoublyLinkedList(8)
+    val node9 = DoublyLinkedList(9)
+    val node10 = DoublyLinkedList(10)
+    val node11 = DoublyLinkedList(11)
+    val node12 = DoublyLinkedList(12)
 
     node1.next = node2
 
@@ -46,7 +48,7 @@ fun main() {
 
     val new = FlattenAMultilevelDoublyLinkedList().flatten(node1)
     new?.let {
-        var c: Node? = it
+        var c: DoublyLinkedList? = it
         do {
             print("${c!!.`val`}, ")
             c = c!!.next
@@ -55,14 +57,14 @@ fun main() {
 }
 
 class FlattenAMultilevelDoublyLinkedList {
-    fun flatten(root: Node?): Node? {
+    fun flatten(root: DoublyLinkedList?): DoublyLinkedList? {
         if (root != null) {
             traverse(root)
         }
         return root
     }
 
-    private fun traverse(node: Node): Node {
+    private fun traverse(node: DoublyLinkedList): DoublyLinkedList {
         var current = node
         do {
             val next = current.next
@@ -87,10 +89,4 @@ class FlattenAMultilevelDoublyLinkedList {
 
         return current
     }
-}
-
-class Node(var `val`: Int) {
-    var prev: Node? = null
-    var next: Node? = null
-    var child: Node? = null
 }

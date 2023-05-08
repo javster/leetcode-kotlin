@@ -1,5 +1,7 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.TreeNode
+
 fun main() {
     val p = TreeNode(1).apply {
         left = TreeNode(2)

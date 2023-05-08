@@ -1,5 +1,7 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.TreeNode
+
 fun main() {
     /* creating a binary tree and entering the nodes */
     val root = TreeNode(1)
@@ -20,7 +22,6 @@ class TreeSolution {
         return 0.coerceAtLeast(max - 1)
     }
 
-
     private fun height(node: TreeNode?): Int {
         if (node == null) return 0
         if (node.left == null && node.right == null) return 1
@@ -32,5 +33,4 @@ class TreeSolution {
 
         return 1 + leftHeight.coerceAtLeast(rightHeight)
     }
-
 }

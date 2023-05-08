@@ -1,5 +1,7 @@
 package com.javster.leetcode
 
+import com.javster.leetcode.utils.TreeNode
+
 class MaximumWidthOfBinaryTree {
     var maxWidth = 0
     val leftmostPosition = mutableMapOf<Int, Int>()
@@ -18,9 +20,4 @@ class MaximumWidthOfBinaryTree {
         traverse(node.right, level + 1, position * 2 + 1)
 
     }
-}
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
