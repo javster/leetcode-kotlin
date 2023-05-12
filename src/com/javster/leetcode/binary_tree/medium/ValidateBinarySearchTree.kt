@@ -1,4 +1,4 @@
-package com.javster.leetcode.tree.medium
+package com.javster.leetcode.binary_tree.medium
 
 import com.javster.leetcode.utils.TreeNode
 

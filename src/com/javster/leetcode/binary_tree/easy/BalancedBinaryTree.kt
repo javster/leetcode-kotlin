@@ -1,4 +1,4 @@
-package com.javster.leetcode.tree.easy
+package com.javster.leetcode.binary_tree.easy
 
 import com.javster.leetcode.utils.TreeNode
 import com.javster.leetcode.utils.treeOfIntsInOrder

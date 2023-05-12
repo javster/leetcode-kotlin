@@ -18,6 +18,6 @@ class ArrangingCoins {
         return row
     }
 
-    fun substractCoins(row: Int, total: Int): Pair<Boolean, Int> = if (total < row + 1) Pair(false, 0)
+    private fun substractCoins(row: Int, total: Int): Pair<Boolean, Int> = if (total < row + 1) Pair(false, 0)
     else Pair(true, total - (row + 1))
 }

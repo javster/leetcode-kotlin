@@ -1,4 +1,4 @@
-package com.javster.leetcode
+package com.javster.leetcode.binary_tree.medium
 
 fun main() {
     println("${BinarySearchTreeUnique().numTrees(6)}")
