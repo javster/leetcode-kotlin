@@ -1,4 +1,4 @@
-package com.javster.leetcode
+package com.javster.leetcode.tree.easy
 
 import com.javster.leetcode.utils.TreeNode
 
